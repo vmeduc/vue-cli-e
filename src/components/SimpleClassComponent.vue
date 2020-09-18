@@ -1,31 +1,26 @@
 <template>
-  <div>{{ name }}</div>
+  <div>
+
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { State, Action } from 'vuex-class';
+
 
 @Component
 export default class SimpleClassComponent extends Vue {
-  firstName = 'John'
-  lastName = 'Doe'
+  
+  @State('messenger')
+  stateMessenger
 
-  // Declared as computed property getter
-  get name() {
-    return this.firstName + ' ' + this.lastName
-  }
-
-  // Declared as computed property setter
-  set name(value) {
-    const splitted = value.split(' ')
-    this.firstName = splitted[0]
-    this.lastName = splitted[1] || ''
-  }
+  @Action('foo')
+  actionFoo
 
   mounted() {
-    console.log(this.name = 'Vlad Melekhin');
-    console.log(this.name);
+    console.log(this.actionFoo());
   }
 }
 </script>

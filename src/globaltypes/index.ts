@@ -1,3 +1,4 @@
-export interface RootState {
-  version: string;
+export interface Message {
+  id: Number
+  text: String
 }
