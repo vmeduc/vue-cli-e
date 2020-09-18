@@ -19,6 +19,7 @@
         <md-card>
           <my-table></my-table>
         </md-card>
+        <simple-class-component></simple-class-component>
       </md-app-content>
     </md-app>
 </template>
@@ -26,11 +27,13 @@
 <script lang="ts">
 import Vue from 'vue';
 import MyTable from '@/components/Table.vue';
+import SimpleClassComponent from '@/components/SimpleClassComponent.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
-    MyTable
+    MyTable,
+    SimpleClassComponent
   },
   data: () => ({
     messages: [],
