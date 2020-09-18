@@ -9,39 +9,28 @@
             <md-button>Three</md-button>
           </div>
           <div class="md-toolbar-section-end">
-            <md-button>
+            <md-button class="md-icon-button">
               <md-icon>exit_to_app</md-icon>
             </md-button>
           </div>
         </div>
       </md-app-toolbar>
       <md-app-content>
-        <div class="md-layout">
-          <div class="md-layout-item">
-            <md-field>
-              <md-input placeholder="Write message" v-model="message"></md-input>
-            </md-field>
-            <md-button @click="addMessage">add</md-button>
-          </div>
-          <div class="md-layout-item">
-
-            <ol>
-              <!-- <li v-for="message in messages" :messages="this.messages" :key="message"></li> -->
-            </ol>
-          </div>
-        </div>
+        <md-card>
+          <my-table></my-table>
+        </md-card>
       </md-app-content>
     </md-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import MyTable from '@/components/Table.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
-    // HelloWorld
+    MyTable
   },
   data: () => ({
     messages: [],
@@ -51,6 +40,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
+  .md-card {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .md-app {
     border: 1px solid rgba(#000, .12);
     min-height: 400px;
