@@ -9,18 +9,19 @@ import Vue from 'vue';
 import Component from 'vue-class-component';
 import { State, Action } from 'vuex-class';
 
+// const namespace = "messenger";
 
 @Component
 export default class SimpleClassComponent extends Vue {
   
   @State('messenger')
-  stateMessenger
+  stateMessenger;
 
-  @Action('foo')
-  actionFoo
+  @Action('test', { namespace: "messenger" })
+  actionFoo: any;
 
   mounted() {
-    console.log(this.actionFoo());
+    this.actionFoo();
   }
 }
 </script>
