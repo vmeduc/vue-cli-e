@@ -17,7 +17,8 @@
       </md-app-toolbar>
       <md-app-content>
         <md-card>
-          <my-table></my-table>
+          <p>hello</p>
+          <p>hello</p>
         </md-card>
       </md-app-content>
     </md-app>
@@ -25,19 +26,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import MyTable from '@/components/Table.vue';
-// import SimpleClassComponent from '@/components/SimpleClassComponent.vue';
+import ExpSelect from '@/components/ExpSelect.vue';
+import ExpTable from '@/components/ExpTable.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
-    MyTable,
-    // SimpleClassComponent
-  },
-  data: () => ({
-    messages: [],
-    message: ''
-  })
+    
+  }
 });
 </script>
 
@@ -49,16 +45,13 @@ export default Vue.extend({
   }
   .md-app {
     border: 1px solid rgba(#000, .12);
-    min-height: 400px;
-  }
-  .md-app-toolbar {
-    background-color: rgb(240, 240, 240);
-  }
-  .md-title {
-    padding-right: 30px;
-  }
-  .md-field {
-    border-bottom: 1px solid rgba(#000, .12);
-    width: 300px;
-  }
+    min-height: 600px;
+  } 
+  // .md-title {
+  //   padding-right: 30px;
+  // }
+  // .md-field {
+  //   border-bottom: 1px solid rgba(#000, .12);
+  //   width: 300px;
+  // }
 </style>
